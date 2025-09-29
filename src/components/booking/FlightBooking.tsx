@@ -9,13 +9,19 @@ const FlightBooking: React.FC = () => {
   const [returnDate, setReturnDate] = useState('');
   const [passengers, setPassengers] = useState('1 Adult');
   const [flightClass, setFlightClass] = useState('Economy');
-
+ const [showOffers, setShowOffers] = useState(false);
   const handleSwapCities = () => {
     const temp = from;
     setFrom(to);
     setTo(temp);
   };
 
+   const offers = [
+    { id: 1, title: "Save 30% on International Flights", desc: "Limited time deal" },
+    { id: 2, title: "Flat ₹2000 OFF on Domestic Flights", desc: "Use code FLY2000" },
+    { id: 3, title: "Business Class Special", desc: "Up to 25% OFF" },
+    { id: 4, title: "Festive Season Offer", desc: "Get cashback up to ₹5000" },
+  ];
   return (
     <div className="space-y-6">
       {/* Trip Type */}
@@ -121,7 +127,7 @@ const FlightBooking: React.FC = () => {
           </div>
         </div>
 
-        {/* Passengers & Class */}
+       
         <div className="lg:col-span-3">
           <div className="grid grid-cols-1 gap-2">
             <div>
@@ -174,10 +180,30 @@ const FlightBooking: React.FC = () => {
         <div className="flex items-center justify-between">
           <div>
             <h4 className="font-semibold text-orange-800">Special Flight Offers</h4>
-            <p className="text-sm text-orange-600">Save up to 30% on international flights</p>
+            <p className="text-sm text-orange-600">
+              Save up to 30% on international flights
+            </p>
           </div>
-          <button className="text-orange-600 font-medium hover:text-orange-700">View All →</button>
+          <button
+            onClick={() => setShowOffers(!showOffers)}
+            className="text-orange-600 font-medium hover:text-orange-700"
+          >
+            {showOffers ? "Hide Offers ↑" : "View All →"}
+          </button>
         </div>
+        {showOffers && (
+          <div className="mt-4 space-y-3">
+            {offers.map((offer) => (
+              <div
+                key={offer.id}
+                className="p-3 bg-white rounded-lg shadow-sm border border-orange-100"
+              >
+                <h5 className="font-medium text-orange-800">{offer.title}</h5>
+                <p className="text-sm text-orange-600">{offer.desc}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
