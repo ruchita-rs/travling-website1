@@ -15,6 +15,8 @@ import FlightResults from './components/booking/FlightResults';
 // import HolidayPackageBooking from './components/booking/HolidayPackageBooking';
 import CabBooking from './components/booking/CabBooking';
 import BookingPage from './components/booking/BookingPage'; 
+import AllDestinations from './pages/AllDestinations';
+import DestinationPackages from './pages/DestinationPackages';
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -68,6 +70,8 @@ function App() {
           <Route path="/results" element={<FlightResults />} />
           <Route path="/cabs" element={<CabBooking />} />
           <Route path="/book" element={<BookingPage />} />   
+          <Route path="/packages" element={<AllDestinations />} />
+  <Route path="/packages/:slug" element={<DestinationPackages />} />
         </Routes>
 
         <Footer />
