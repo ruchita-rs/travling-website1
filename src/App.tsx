@@ -13,6 +13,8 @@ import TrainBooking from './components/booking/TrainBooking';
 import BusBooking from './components/booking/BusBooking';
 // import HolidayPackageBooking from './components/booking/HolidayPackageBooking';
 import CabBooking from './components/booking/CabBooking';
+import AllDestinations from './pages/AllDestinations';
+import DestinationPackages from './pages/DestinationPackages';
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -65,6 +67,8 @@ function App() {
           <Route path="/buses" element={<BusBooking />} />
           {/* <Route path="/holidays" element={<HolidayPackageBooking />} /> */}
           <Route path="/cabs" element={<CabBooking />} />
+          <Route path="/packages" element={<AllDestinations />} />
+  <Route path="/packages/:slug" element={<DestinationPackages />} />
         </Routes>
 
         <Footer />
