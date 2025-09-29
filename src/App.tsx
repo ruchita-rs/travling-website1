@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Changed to HashRouter
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BookingTabs from './components/BookingTabs';
@@ -6,6 +7,16 @@ import PopularDestinations from './components/PopularDestinations';
 import OngoingOffers from './components/OngoingOffers';
 import Footer from './components/Footer';
 import AuthModal from './components/AuthModal';
+import FlightBooking from './components/booking/FlightBooking';
+import HotelBooking from './components/booking/HotelBooking';
+import TrainBooking from './components/booking/TrainBooking';
+import BusBooking from './components/booking/BusBooking';
+import FlightResults from './components/booking/FlightResults';
+// import HolidayPackageBooking from './components/booking/HolidayPackageBooking';
+import CabBooking from './components/booking/CabBooking';
+import BookingPage from './components/booking/BookingPage'; 
+import AllDestinations from './pages/AllDestinations';
+import DestinationPackages from './pages/DestinationPackages';
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -34,28 +45,47 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header 
-        isLoggedIn={isLoggedIn} 
-        user={user} 
-        onAuthOpen={handleAuthOpen}
-        onLogout={handleLogout}
-      />
-      <Hero />
-      <BookingTabs />
-      <PopularDestinations />
-      <OngoingOffers />
-      <Footer />
-      
-      {isAuthModalOpen && (
-        <AuthModal
-          type={authType}
-          onClose={handleAuthClose}
-          onLogin={handleLogin}
-          onToggleType={() => setAuthType(authType === 'login' ? 'signup' : 'login')}
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Header 
+          isLoggedIn={isLoggedIn} 
+          user={user} 
+          onAuthOpen={handleAuthOpen}
+          onLogout={handleLogout}
         />
-      )}
-    </div>
+
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <BookingTabs />
+              <PopularDestinations />
+              <OngoingOffers />
+            </>
+          } />
+          <Route path="/flights" element={<FlightBooking />} />
+          <Route path="/hotels" element={<HotelBooking />} />
+          <Route path="/trains" element={<TrainBooking />} />
+          <Route path="/buses" element={<BusBooking />} />
+          <Route path="/results" element={<FlightResults />} />
+          <Route path="/cabs" element={<CabBooking />} />
+          <Route path="/book" element={<BookingPage />} />   
+          <Route path="/packages" element={<AllDestinations />} />
+  <Route path="/packages/:slug" element={<DestinationPackages />} />
+        </Routes>
+
+        <Footer />
+
+        {isAuthModalOpen && (
+          <AuthModal
+            type={authType}
+            onClose={handleAuthClose}
+            onLogin={handleLogin}
+            onToggleType={() => setAuthType(authType === 'login' ? 'signup' : 'login')}
+          />
+        )}
+      </div>
+    </Router>
   );
 }
 
