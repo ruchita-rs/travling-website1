@@ -100,7 +100,7 @@ const OngoingOffers: React.FC = () => {
                     <span className="text-sm text-gray-500">{offer.validity}</span>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-3 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
+                  <button className="w-full bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white py-3 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
                     <span>Grab Offer</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -112,7 +112,7 @@ const OngoingOffers: React.FC = () => {
 
         {/* Quick Offers Banner */}
         <div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-2xl p-8 text-center text-white shadow-xl">
-          <h3 className="text-2xl font-bold mb-6">⚡ Quick Offers - Limited Time!</h3>
+          <h3 className="text-2xl font-bold mb-6"> Quick Offers - Limited Time!</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {quickOffers.map((offer, index) => (
               <div key={index} className="bg-white/20 backdrop-blur-sm rounded-xl p-4 hover:bg-white/30 transition-colors cursor-pointer">
@@ -127,7 +127,7 @@ const OngoingOffers: React.FC = () => {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center space-x-2">
-              <CreditCard className="w-6 h-6 text-blue-600" />
+              <CreditCard className="w-6 h-6 text-[#40a1ef]" />
               <span>Bank Offers</span>
             </h4>
             <div className="space-y-3">
@@ -138,7 +138,7 @@ const OngoingOffers: React.FC = () => {
                 'Axis Bank: Zero Processing Fee'
               ].map((offer, index) => (
                 <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full" />
+                  <div className="w-2 h-2 bg-[#40a1ef] rounded-full" />
                   <span className="text-gray-700">{offer}</span>
                 </div>
               ))}
