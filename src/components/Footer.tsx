@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               const Icon = feature.icon;
               return (
                 <div key={index} className="flex items-center space-x-3">
-                  <div className="bg-blue-600 p-3 rounded-full">
+                  <div className="bg-[#40a1ef] p-3 rounded-full">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <span className="font-medium text-white">{feature.text}</span>
@@ -69,9 +69,18 @@ const Footer: React.FC = () => {
             {/* Company Info */}
             <div className="space-y-6">
               <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent mb-4">
-                  TravelEase
-                </div>
+               <a href="/" className="flex items-center">
+              <img
+                src="/images/logo-imge-removebg-preview.png"
+                alt="TravelEase Logo"
+                className="w-20 h-20 object-contain"
+              />
+            </a>
+
+            <span className="ml-3 text-2xl font-bold bg-gradient-to-r from-[#40a1ef] to-teal-600 bg-clip-text text-transparent">
+              EaseMyTrip
+            </span>
+
                 <p className="text-gray-400 leading-relaxed">
                   Your trusted travel companion for flights, hotels, trains, and holiday packages. 
                   Making travel easy and affordable for everyone.
@@ -80,15 +89,15 @@ const Footer: React.FC = () => {
               
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
+                  <Phone className="w-5 h-5 text-[#40a1ef]" />
                   <span>1-800-123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
+                  <Mail className="w-5 h-5 text-[#40a1ef]" />
                   <span>support@travelease.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-400" />
+                  <MapPin className="w-5 h-5 text-[#40a1ef]" />
                   <span>Mumbai, Delhi, Bangalore</span>
                 </div>
               </div>
@@ -99,7 +108,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href="#"
-                    className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                    className="bg-gray-800 p-2 rounded-full hover:[#40a1ef] transition-colors duration-300"
                   >
                     <Social className="w-5 h-5" />
                   </a>
@@ -117,7 +126,7 @@ const Footer: React.FC = () => {
                     <a
                       key={index}
                       href={service.href}
-                      className="flex items-center space-x-3 text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                      className="flex items-center space-x-3 text-gray-400 hover:text-[#40a1ef] transition-colors duration-200"
                     >
                       <Icon className="w-4 h-4" />
                       <span>{service.name}</span>
@@ -135,7 +144,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href="#"
-                    className="block text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                    className="block text-gray-400 hover:text-[#40a1ef] transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -151,7 +160,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href="#"
-                    className="block text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                    className="block text-gray-400 hover:text-[#40a1ef]transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -168,14 +177,23 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-             2025 Design & Developed by RIGHT SERVE INFOTECH SYSTEMS PVT.LTD
-            </div>
+  2025 Design & Developed by{" "}
+  <a
+    href="https://rsinfotechsys.com/" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[#40a1ef] hover:underline"
+  >
+    RIGHT SERVE INFOTECH SYSTEMS PVT.LTD
+  </a>
+</div>
+
             
             <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-400">
               <span>We Accept:</span>
               <div className="flex space-x-2">
                 {['Visa', 'Mastercard', 'Paytm', 'PhonePe', 'GPay'].map((payment, index) => (
-                  <div key={index} className="bg-gray-800 px-3 py-1 rounded text-xs">
+                  <div key={index} className="bg-[#40a1ef] text-white px-3 py-1 rounded text-xs">
                     {payment}
                   </div>
                 ))}

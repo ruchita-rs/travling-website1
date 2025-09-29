@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Changed to HashRouter
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BookingTabs from './components/BookingTabs';
@@ -11,8 +11,10 @@ import FlightBooking from './components/booking/FlightBooking';
 import HotelBooking from './components/booking/HotelBooking';
 import TrainBooking from './components/booking/TrainBooking';
 import BusBooking from './components/booking/BusBooking';
+import FlightResults from './components/booking/FlightResults';
 // import HolidayPackageBooking from './components/booking/HolidayPackageBooking';
 import CabBooking from './components/booking/CabBooking';
+import BookingPage from './components/booking/BookingPage'; 
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -63,8 +65,9 @@ function App() {
           <Route path="/hotels" element={<HotelBooking />} />
           <Route path="/trains" element={<TrainBooking />} />
           <Route path="/buses" element={<BusBooking />} />
-          {/* <Route path="/holidays" element={<HolidayPackageBooking />} /> */}
+          <Route path="/results" element={<FlightResults />} />
           <Route path="/cabs" element={<CabBooking />} />
+          <Route path="/book" element={<BookingPage />} />   
         </Routes>
 
         <Footer />

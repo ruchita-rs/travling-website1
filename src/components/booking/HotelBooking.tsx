@@ -103,7 +103,7 @@ const HotelBooking: React.FC = () => {
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-sm font-medium">{hotel.rating}</span>
                   </div>
-                  <div className="font-semibold text-blue-600">{hotel.price}/night</div>
+                  <div className="font-semibold text-[#000]">{hotel.price}/night</div>
                 </div>
               </div>
             </div>
