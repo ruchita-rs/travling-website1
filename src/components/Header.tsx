@@ -29,9 +29,9 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, user, onAuthOpen, onLogout 
               <span>Serving 200+ destinations worldwide</span>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-4">
+          {/* <div className="hidden md:flex items-center space-x-4">
             <span>Download our mobile app</span>
-          </div>
+          </div> */}
         </div>
       </div>
 

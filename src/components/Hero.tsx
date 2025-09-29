@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Search, MapPin, Star } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -7,58 +7,80 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const HeroSection: React.FC = () => {
+  const swiperRef = useRef<any>(null);
+
   return (
     <section className="relative text-white py-20">
-      
-     <Swiper
-  modules={[Autoplay, Pagination, Navigation]}
-  autoplay={{ delay: 4000, disableOnInteraction: false }}
-  pagination={{ clickable: true }}
-  navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-  loop
-  className="absolute inset-0 h-full w-full"
->
-  {/* Slide 1 */}
-  <SwiperSlide>
-    <img
-      src="/images/flights/flight1.jpg"
-      alt="Flight 1"
-      className="w-full h-full object-cover"
-    />
-  </SwiperSlide>
+      {/* Swiper */}
+      <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        navigation={false} // default arrows disable
+        loop
+        className="absolute inset-0 h-full w-full"
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+      >
+        {/* Slides */}
+        <SwiperSlide>
+          <img
+            src="/images/full-shot-woman-taking-selfie (1).jpg"
+            alt="Flight 1"
+            className="w-full h-full object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/images/WhatsApp Image 2025-09-29 at 14.07.40_60823de7.jpg"
+            alt="Flight 2"
+            className="w-full h-full object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/images/aircraft-2634503_1280.jpg"
+            alt="Flight 3"
+            className="w-full h-full object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/images/top-view-tickets-little-plane.jpg"
+            alt="Flight 4"
+            className="w-full h-full object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/images/istockphoto-530089923-1024x1024.jpg"
+            alt="Flight 5"
+            className="w-full h-full object-cover"
+          />
+        </SwiperSlide>
+      </Swiper>
 
-  {/* Slide 2 */}
-  <SwiperSlide>
-    <img
-      src="/images/flights/flight2.jpg"
-      alt="Flight 2"
-      className="w-full h-full object-cover"
-    />
-  </SwiperSlide>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-  {/* Slide 3 */}
-  <SwiperSlide>
-    <img
-      src="/images/flights/flight3.jpg"
-      alt="Flight 3"
-      className="w-full h-full object-cover"
-    />
-  </SwiperSlide>
+      {/* Custom Arrows */}
+      {/* Left Arrow */}
+      <div
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20 w-14 h-14 flex items-center justify-center rounded-full bg-black/50 hover:bg-black/70 transition-all duration-300 shadow-lg cursor-pointer"
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
+        <span className="text-white text-3xl font-bold select-none">‹</span>
+      </div>
 
-  {/* Arrows */}
-  <div className="swiper-button-prev !text-white !w-12 !h-12 !left-4 after:!hidden flex items-center justify-center bg-black/40 rounded-full hover:bg-black/70 transition">
-    <span className="text-2xl">‹</span>
-  </div>
-  <div className="swiper-button-next !text-white !w-12 !h-12 !right-4 after:!hidden flex items-center justify-center bg-black/40 rounded-full hover:bg-black/70 transition">
-    <span className="text-2xl">›</span>
-  </div>
-</Swiper>
+      {/* Right Arrow */}
+      <div
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20 w-14 h-14 flex items-center justify-center rounded-full bg-black/50 hover:bg-black/70 transition-all duration-300 shadow-lg cursor-pointer"
+        onClick={() => swiperRef.current?.slideNext()}
+      >
+        <span className="text-white text-3xl font-bold select-none">›</span>
+      </div>
 
-
-   
-      <div className="absolute inset-0 bg-black/40"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 text-center">
+      {/* Text Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Discover Your Next
           <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
@@ -70,7 +92,7 @@ const HeroSection: React.FC = () => {
           Your perfect journey starts here.
         </p>
 
-        
+        {/* Search Box */}
         <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
             <div className="flex-1 relative">
@@ -88,7 +110,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-      
+        {/* Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold">2M+</div>
