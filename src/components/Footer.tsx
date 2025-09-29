@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2025 TravelEase. All rights reserved.
+             2025 Design & Developed by RIGHT SERVE INFOTECH SYSTEMS PVT.LTD
             </div>
             
             <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-400">

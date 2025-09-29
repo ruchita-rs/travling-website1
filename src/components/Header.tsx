@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, X, User, Phone, MapPin } from 'lucide-react';
+// import Image from 'next/image';
+import { 
+  Menu, X, User, Phone, MapPin, Plane, Hotel, Train, Bus, Gift, Car 
+} from 'lucide-react';
 
 interface HeaderProps {
   isLoggedIn: boolean;
@@ -35,21 +38,42 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, user, onAuthOpen, onLogout 
       {/* Main header */}
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
+          
+          {/* Logo */}
           <div className="flex items-center space-x-8">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              TravelEase
-            </div>
-            
+            <a href="/" className="flex items-center">
+  <img
+    src="/images/logo.jpg"
+    alt="TravelEase Logo"
+    className="h-10 w-auto object-contain"
+  />
+</a>
+
+
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Flights</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Hotels</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Trains</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Buses</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Holiday Packages</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Cabs</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Plane className="w-4 h-4 mr-2" /> Flights
+              </a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Hotel className="w-4 h-4 mr-2" /> Hotels
+              </a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Train className="w-4 h-4 mr-2" /> Trains
+              </a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Bus className="w-4 h-4 mr-2" /> Buses
+              </a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Gift className="w-4 h-4 mr-2" /> Holiday Packages
+              </a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Car className="w-4 h-4 mr-2" /> Cabs
+              </a>
             </nav>
           </div>
 
+          {/* Auth + Mobile menu button */}
           <div className="flex items-center space-x-4">
             {isLoggedIn ? (
               <div className="flex items-center space-x-4">
@@ -83,6 +107,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, user, onAuthOpen, onLogout 
               </div>
             )}
 
+            {/* Mobile toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden text-gray-600 hover:text-blue-600 transition-colors"
@@ -96,12 +121,12 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, user, onAuthOpen, onLogout 
         {isMenuOpen && (
           <div className="lg:hidden mt-4 py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Flights</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Hotels</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Trains</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Buses</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Holiday Packages</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Cabs</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">Flights</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">Hotels</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">Trains</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">Buses</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">Holiday Packages</a>
+              <a href="#" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">Cabs</a>
             </nav>
           </div>
         )}
