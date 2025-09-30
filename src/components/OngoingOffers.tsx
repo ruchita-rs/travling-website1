@@ -11,7 +11,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Valid till 31st March',
       image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: Percent,
-      // color: 'from-blue-500 to-blue-700'
+      color: 'from-blue-500 to-blue-700'
     },
     {
       type: 'Hotel Deal',
@@ -21,7 +21,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Valid for 7 days',
       image: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: Gift,
-      // color: 'from-green-500 to-green-700'
+      color: 'from-green-500 to-green-700'
     },
     {
       type: 'Train Offer',
@@ -31,7 +31,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Limited time offer',
       image: 'https://images.pexels.com/photos/3572920/pexels-photo-3572920.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: Clock,
-      // color: 'from-purple-500 to-purple-700'
+      color: 'from-purple-500 to-purple-700'
     },
     {
       type: 'Bank Offer',
@@ -41,7 +41,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Valid on weekends',
       image: 'https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: CreditCard,
-      // color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
