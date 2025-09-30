@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
-        navigation={false} // default arrows disable
+        navigation={false} 
         loop
         className="absolute inset-0 h-full w-full"
         onSwiper={(swiper) => (swiperRef.current = swiper)}

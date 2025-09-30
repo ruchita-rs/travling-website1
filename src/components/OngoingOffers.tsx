@@ -11,7 +11,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Valid till 31st March',
       image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: Percent,
-      color: 'from-blue-500 to-blue-700'
+      // color: 'from-blue-500 to-blue-700'
     },
     {
       type: 'Hotel Deal',
@@ -21,7 +21,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Valid for 7 days',
       image: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: Gift,
-      color: 'from-green-500 to-green-700'
+      // color: 'from-green-500 to-green-700'
     },
     {
       type: 'Train Offer',
@@ -31,7 +31,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Limited time offer',
       image: 'https://images.pexels.com/photos/3572920/pexels-photo-3572920.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: Clock,
-      color: 'from-purple-500 to-purple-700'
+      // color: 'from-purple-500 to-purple-700'
     },
     {
       type: 'Bank Offer',
@@ -41,7 +41,7 @@ const OngoingOffers: React.FC = () => {
       validity: 'Valid on weekends',
       image: 'https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=400',
       icon: CreditCard,
-      color: 'from-orange-500 to-red-500'
+      // color: 'from-orange-500 to-red-500'
     }
   ];
 
@@ -79,7 +79,7 @@ const OngoingOffers: React.FC = () => {
                     alt={offer.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-r ${offer.color} opacity-80`} />
+                  <div className={`absolute inset-0 bg-gradient-to-r opacity-80`} />
                   <div className="absolute top-4 left-4">
                     <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm font-medium flex items-center space-x-2">
                       <Icon className="w-4 h-4" />
@@ -111,7 +111,7 @@ const OngoingOffers: React.FC = () => {
         </div>
 
         {/* Quick Offers Banner */}
-        <div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-2xl p-8 text-center text-white shadow-xl">
+        <div className="bg-gradient-to-r from-[#030712] via-[#030712] to-[#030712] rounded-2xl p-8 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-6"> Quick Offers - Limited Time!</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {quickOffers.map((offer, index) => (
