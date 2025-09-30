@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
         </p>
 
         {/* Search Box */}
-        <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-4xl mx-auto">
+        {/* <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
             <div className="flex-1 relative">
               <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
               <span>Search</span>
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">

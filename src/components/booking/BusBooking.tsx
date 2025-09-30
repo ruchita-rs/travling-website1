@@ -45,7 +45,7 @@ const BusBooking: React.FC = () => {
             onClick={handleSwapCities}
             className="absolute right-2 top-12 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition-colors z-10"
           >
-            <ArrowRightLeft className="w-4 h-4 text-blue-600" />
+            <ArrowRightLeft className="w-4 h-4 text-[#40a1ef]" />
           </button>
         </div>
 
@@ -87,7 +87,7 @@ const BusBooking: React.FC = () => {
         {/* Search Button */}
         <div className="lg:col-span-2">
           <div className="h-full flex items-end">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
+            <button className="w-full bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
               <Search className="w-5 h-5" />
               <span>Search Buses</span>
             </button>
@@ -108,7 +108,7 @@ const BusBooking: React.FC = () => {
             <div key={index} className="bg-white p-4 rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
               <div className="font-semibold text-gray-800 mb-2">{route.route}</div>
               <div className="text-sm text-gray-600 mb-1">{route.duration}</div>
-              <div className="font-semibold text-blue-600">{route.price}</div>
+              <div className="font-semibold text-[#40a1ef]">{route.price}</div>
             </div>
           ))}
         </div>

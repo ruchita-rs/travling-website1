@@ -80,7 +80,7 @@ const ActivitiesBooking: React.FC = () => {
         {/* Search Button */}
         <div className="lg:col-span-2">
           <div className="h-full flex items-end">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
+            <button className="w-full bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
               <Search className="w-5 h-5" />
               <span>Search Activities</span>
             </button>
@@ -136,7 +136,7 @@ const ActivitiesBooking: React.FC = () => {
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="relative">
                   <img src={activity.image} alt={activity.title} className="w-full h-40 object-cover" />
-                  <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-blue-600 flex items-center space-x-1">
+                  <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-[#40a1ef] flex items-center space-x-1">
                     <Icon className="w-4 h-4" />
                     <span>{activity.category}</span>
                   </div>
@@ -148,8 +148,8 @@ const ActivitiesBooking: React.FC = () => {
                   <h5 className="font-bold text-gray-800 mb-2">{activity.title}</h5>
                   <p className="text-gray-600 text-sm mb-3">{activity.duration}</p>
                   <div className="flex items-center justify-between">
-                    <div className="font-bold text-lg text-blue-600">{activity.price}</div>
-                    <button className="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                    <div className="font-bold text-lg text-[#40a1ef]">{activity.price}</div>
+                    <button className="bg-[#40a1ef] text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
                       Book Now
                     </button>
                   </div>
