@@ -76,7 +76,7 @@ const HotelBooking: React.FC = () => {
         {/* Search Button */}
         <div className="lg:col-span-2">
           <div className="h-full flex items-end">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
+            <button className="w-full bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
               <Search className="w-5 h-5" />
               <span>Search Hotels</span>
             </button>

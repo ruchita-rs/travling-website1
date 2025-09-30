@@ -142,10 +142,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ type, onClose, onLogin, onToggleT
             {type === 'login' && (
               <div className="flex items-center justify-between">
                 <label className="flex items-center">
-                  <input type="checkbox" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+                  <input type="checkbox" className="rounded border-gray-300 text-[#40a1ef] focus:ring-blue-500" />
                   <span className="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
-                <a href="#" className="text-sm text-blue-600 hover:text-blue-700">
+                <a href="#" className="text-sm text-[#40a1ef] hover:text-blue-700">
                   Forgot password?
                 </a>
               </div>
@@ -154,7 +154,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ type, onClose, onLogin, onToggleT
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-3 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white py-3 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center space-x-2">
@@ -173,7 +173,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ type, onClose, onLogin, onToggleT
               {type === 'login' ? "Don't have an account? " : "Already have an account? "}
               <button
                 onClick={onToggleType}
-                className="text-blue-600 hover:text-blue-700 font-medium"
+                className="text-[#40a1ef] hover:text-blue-700 font-medium"
               >
                 {type === 'login' ? 'Sign Up' : 'Sign In'}
               </button>

@@ -56,8 +56,8 @@ const BookingTabs: React.FC = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 min-w-0 flex items-center justify-center space-x-2 py-3 px-4 rounded-xl transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-white text-blue-600 shadow-md transform scale-105'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-white/50'
+                      ? 'bg-white text-[#40a1ef] shadow-md transform scale-105'
+                      : 'text-gray-600 hover:text-[#40a1ef] hover:bg-white/50'
                   }`}
                 >
                   <Icon className="w-4 h-4 md:w-5 md:h-5" />
