@@ -123,7 +123,7 @@ const FlightBooking: React.FC = () => {
           onClick={handleSwapCities}
           className="flex-shrink-0 bg-white border  border-gray-300 rounded-full p-2 shadow hover:bg-gray-50 transition-colors"
         >
-          <ArrowRightLeft className="w-5 h-5  text-blue-600 " />
+          <ArrowRightLeft className="w-5 h-5  text-[#40a1ef] " />
         </button>
 
         {/* To */}

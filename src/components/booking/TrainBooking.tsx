@@ -45,7 +45,7 @@ const TrainBooking: React.FC = () => {
             onClick={handleSwapStations}
             className="absolute right-2 top-12 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition-colors z-10"
           >
-            <ArrowRightLeft className="w-4 h-4 text-blue-600" />
+            <ArrowRightLeft className="w-4 h-4 text-[#40a1ef]" />
           </button>
         </div>
 
@@ -83,7 +83,7 @@ const TrainBooking: React.FC = () => {
         {/* Search Button */}
         <div className="lg:col-span-2">
           <div className="h-full flex items-end">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
+            <button className="w-full bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold">
               <Search className="w-5 h-5" />
               <span>Search Trains</span>
             </button>
@@ -99,7 +99,7 @@ const TrainBooking: React.FC = () => {
         </div>
         <div className="bg-blue-50 p-4 rounded-xl border border-blue-200">
           <div className="text-blue-800 font-semibold mb-2">PNR Status Check</div>
-          <p className="text-sm text-blue-600">Check your booking confirmation</p>
+          <p className="text-sm text-[#40a1ef]">Check your booking confirmation</p>
         </div>
         <div className="bg-purple-50 p-4 rounded-xl border border-purple-200">
           <div className="text-purple-800 font-semibold mb-2">Seat Availability</div>

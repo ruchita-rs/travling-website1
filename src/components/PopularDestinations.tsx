@@ -87,10 +87,10 @@ const PopularDestinations: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{destination.name}</h3>
                 <p className="text-gray-600 mb-4">{destination.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-blue-600">{destination.price}</span>
+                  <span className="text-2xl font-bold text-[#40a1ef]">{destination.price}</span>
                   <button
                     onClick={() => navigate(`/packages/${destination.slug}`)}
-                    className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
+                    className="bg-[#40a1ef] text-white px-6 py-2 rounded-full hover:bg-[#40a1ef] transition-colors font-medium"
                   >
                     View Packages
                   </button>
@@ -103,7 +103,7 @@ const PopularDestinations: React.FC = () => {
         <div className="text-center mt-12">
           <button
             onClick={() => navigate('/packages')}
-            className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            className="bg-gradient-to-r from-[#40a1ef] to-teal-600 text-white px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 font-semibold text-lg"
           >
             View All Destinations
           </button>
